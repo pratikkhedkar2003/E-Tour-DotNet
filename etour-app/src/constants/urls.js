@@ -1,0 +1,1 @@
+export const TOUR_SERVICE_BASE_URL = "http://localhost:5232/api";
