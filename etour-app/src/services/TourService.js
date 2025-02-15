@@ -6,6 +6,7 @@ import {
   processResponse,
 } from "../utils/requestutils";
 import { httpGet, httpPost, httpPatch } from "../constants/http";
+import { ACCESS, AUTHORIZATION, BEARER } from "../constants/cache.key";
 
 export const tourAPI = createApi({
   reducerPath: "tourAPI",
@@ -13,12 +14,19 @@ export const tourAPI = createApi({
     baseUrl: `${TOUR_SERVICE_BASE_URL}/tour`,
     credentials: "include",
     isJsonContentType,
+    prepareHeaders: (headers) => {
+      const token = JSON.parse(sessionStorage.getItem(ACCESS));
+      if (token) {
+        headers.set(AUTHORIZATION, `${BEARER} ${token}`);
+      }
+      return headers;
+    },
   }),
   tagTypes: ["tour"],
   endpoints: (builder) => ({
     fetchAllToursByTourSubCategoryId: builder.query({
       query: (tourSubCategoryId) => ({
-        url: `?tourSubcategoryId=${tourSubCategoryId}`,
+        url: `/toursubcategory/${tourSubCategoryId}`,
         method: httpGet,
       }),
       keepUnusedDataFor: 120,
@@ -28,7 +36,7 @@ export const tourAPI = createApi({
     }),
     addTourReview: builder.mutation({
       query: (newReview) => ({
-        url: "/review/create",
+        url: "/review",
         method: httpPost,
         body: newReview,
       }),
@@ -37,7 +45,7 @@ export const tourAPI = createApi({
     }),
     createTourBooking: builder.mutation({
       query: (newBooking) => ({
-        url: "/booking/create",
+        url: "/booking",
         method: httpPost,
         body: newBooking,
       }),
@@ -54,7 +62,7 @@ export const tourAPI = createApi({
     }),
     fetchTourBookingsByUserId: builder.query({
       query: (userId) => ({
-        url: `/user/bookings/${userId}`,
+        url: `/booking/user/${userId}`,
         method: httpGet,
       }),
       transformResponse: processResponse,
@@ -62,7 +70,7 @@ export const tourAPI = createApi({
     }),
     fetchAllPopularTours: builder.query({
       query: () => ({
-        url: "/popular/list",
+        url: "/popular",
         method: httpGet,
       }),
       transformResponse: processResponse,
@@ -70,7 +78,7 @@ export const tourAPI = createApi({
     }),
     fetchAllTours: builder.query({
       query: () => ({
-        url: "/list",
+        url: "/",
         method: httpGet,
       }),
       keepUnusedDataFor: 120,

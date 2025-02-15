@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 using Microsoft.EntityFrameworkCore;
 
 namespace etour_api.Models;
@@ -49,5 +50,6 @@ public partial class Address
 
     [ForeignKey("UserId")]
     [InverseProperty("Addresses")]
+    [JsonIgnore]
     public virtual User User { get; set; } = null!;
 }

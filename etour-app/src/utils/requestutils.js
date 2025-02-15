@@ -21,7 +21,9 @@ export const processResponse = (response, meta) => {
   }
 
   if (!request?.url?.includes("profile")) {
-    toastSuccess(response.message);
+    if (response.message != "") {
+      toastSuccess(response.message);
+    }
   }
   return response;
 };

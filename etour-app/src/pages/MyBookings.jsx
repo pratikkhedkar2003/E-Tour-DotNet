@@ -64,9 +64,7 @@ const MyBookings = () => {
                       <tr key={booking.id}>
                         <td>{booking.referenceId}</td>
                         <td>
-                          {new Date(
-                            booking.bookingDate
-                          ).toLocaleDateString()}
+                          {booking.bookingDate}
                         </td>
                         <td>{getStatusBadge(booking.bookingStatus)}</td>
                         <td>{booking.totalPrice}</td>

@@ -10,7 +10,7 @@ import { httpGet } from "../constants/http";
 export const tourSubCategoryAPI = createApi({
   reducerPath: "tourSubCategoryAPI",
   baseQuery: fetchBaseQuery({
-    baseUrl: `${TOUR_SERVICE_BASE_URL}/tour-subcategory`,
+    baseUrl: `${TOUR_SERVICE_BASE_URL}/toursubcategory`,
     credentials: "include",
     isJsonContentType,
   }),
@@ -18,7 +18,7 @@ export const tourSubCategoryAPI = createApi({
   endpoints: (builder) => ({
     fetchTourSubCategoriesByTourCategoryId: builder.query({
       query: (tourCategoryId) => ({
-        url: `/tour-category/${tourCategoryId}`,
+        url: `/tourcategory/${tourCategoryId}`,
         method: httpGet,
       }),
       keepUnusedDataFor: 120,
@@ -28,7 +28,7 @@ export const tourSubCategoryAPI = createApi({
     }),
     fetchAllTourSubCategories: builder.query({
       query: () => ({
-        url: "/list",
+        url: "/",
         method: httpGet,
       }),
       keepUnusedDataFor: 120,

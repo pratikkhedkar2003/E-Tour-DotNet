@@ -51,11 +51,11 @@ public class UserController : ControllerBase
     }
 
     [Authorize(Roles = "ROLE_USER,ROLE_ADMIN")]
-    [HttpPatch("profile")]
+    [HttpPatch("update")]
     public async Task<ActionResult<Response>> UpdateUserProfile([FromQuery] ulong userId, [FromBody] UserRequest userRequest)
     {
         UserDto userDto = await _userService.UpdateUserProfile(userId, userRequest);
-        return Ok(RequestUtils.GetResponse(path: "api/user/profile", code: 200, message: "User updated successfully", data: new Dictionary<string, object> { { "user", userDto } }));
+        return Ok(RequestUtils.GetResponse(path: "api/user/profile", code: 200, message: "Profile updated successfully", data: new Dictionary<string, object> { { "user", userDto } }));
     }
 
     [Authorize(Roles = "ROLE_USER,ROLE_ADMIN")]

@@ -50,9 +50,15 @@ builder.Services.AddDbContextPool<AppDbContext>((options) =>
     )
 );
 
+builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
+builder.Services.AddScoped<IEmailService, EmailServiceImpl>();
+
 builder.Services.AddScoped<IUserService, UserServiceImpl>();
 builder.Services.AddScoped<IJwtService, JwtServiceImpl>();
 builder.Services.AddScoped<ITourCategoryService, TourCategoryServiceImpl>();
+builder.Services.AddScoped<ITourSubCategoryService, TourSubCategoryServiceImpl>();
+builder.Services.AddScoped<ITourService, TourServiceImpl>();
+builder.Services.AddScoped<IPaymentService, PaymentServiceImpl>();
 
 builder.Services.AddExceptionHandler<ApiExceptionHandler>();
 

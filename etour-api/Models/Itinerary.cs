@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 using Microsoft.EntityFrameworkCore;
 
 namespace etour_api.Models;
@@ -40,5 +41,6 @@ public partial class Itinerary
 
     [ForeignKey("TourId")]
     [InverseProperty("Itineraries")]
+    [JsonIgnore]
     public virtual Tour Tour { get; set; } = null!;
 }

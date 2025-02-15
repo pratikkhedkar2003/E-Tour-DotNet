@@ -32,11 +32,11 @@ const TourDetails = () => {
   console.log("tour", tour);
 
   const tourPrice = {
-    singlePersonPrice: tour?.tourPrice?.singlePersonPrice,
-    twinSharingPrice: tour?.tourPrice?.twinSharingPrice,
-    extraPersonPrice: tour?.tourPrice?.extraPersonPrice,
-    childWithBedPrice: tour?.tourPrice?.childWithBedPrice,
-    childWithoutBedPrice: tour?.tourPrice?.childWithoutBedPrice,
+    singlePersonPrice: tour?.tourPrices[0]?.singlePersonPrice,
+    twinSharingPrice: tour?.tourPrices[0]?.twinSharingPrice,
+    extraPersonPrice: tour?.tourPrices[0]?.extraPersonPrice,
+    childWithBedPrice: tour?.tourPrices[0]?.childWithBedPrice,
+    childWithoutBedPrice: tour?.tourPrices[0]?.childWithoutBedPrice,
   };
 
   const [rating, setRating] = useState(0);

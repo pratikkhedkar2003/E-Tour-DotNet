@@ -47,6 +47,10 @@
               "target": "Package",
               "version": "[4.0.2, )"
             },
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.9.0, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[8.0.10, )"
@@ -87,6 +91,10 @@
               "target": "Package",
               "version": "[8.0.0, )"
             },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[47.3.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.6.2, )"
@@ -94,6 +102,10 @@
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
               "version": "[8.3.1, )"
+            },
+            "iTextSharp-LGPL": {
+              "target": "Package",
+              "version": "[4.1.6, )"
             }
           },
           "imports": [

@@ -16,7 +16,6 @@ export const userAPI = createApi({
     isJsonContentType,
     prepareHeaders: (headers) => {
       const token = JSON.parse(sessionStorage.getItem(ACCESS));
-
       if (token) {
         headers.set(AUTHORIZATION, `${BEARER} ${token}`);
       }
@@ -102,7 +101,7 @@ export const userAPI = createApi({
     }),
     updateUser: builder.mutation({
       query: (user) => ({
-        url: `/profile?userId=${localStorage.getItem(USER_ID)}`,
+        url: `/update?userId=${localStorage.getItem(USER_ID)}`,
         method: httpPatch,
         body: user,
       }),

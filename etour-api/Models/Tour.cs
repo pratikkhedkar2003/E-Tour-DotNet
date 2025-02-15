@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 using Microsoft.EntityFrameworkCore;
 
 namespace etour_api.Models;
@@ -59,6 +60,7 @@ public partial class Tour
     public ulong IsPopular { get; set; }
 
     [InverseProperty("Tour")]
+    [JsonIgnore]
     public virtual ICollection<Booking> Bookings { get; set; } = new List<Booking>();
 
     [InverseProperty("Tour")]
@@ -68,6 +70,7 @@ public partial class Tour
     public virtual ICollection<Itinerary> Itineraries { get; set; } = new List<Itinerary>();
 
     [InverseProperty("Tour")]
+    [JsonIgnore]
     public virtual ICollection<Passenger> Passengers { get; set; } = new List<Passenger>();
 
     [InverseProperty("Tour")]
@@ -78,5 +81,6 @@ public partial class Tour
 
     [ForeignKey("TourSubcategoryId")]
     [InverseProperty("Tours")]
+    [JsonIgnore]
     public virtual TourSubcategory TourSubcategory { get; set; } = null!;
 }

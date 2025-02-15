@@ -192,9 +192,7 @@ const BookingDetails = () => {
                           <td>{passenger.gender}</td>
                           <td>{passenger.age}</td>
                           <td>
-                            {new Date(
-                              passenger.dateOfBirth
-                            ).toLocaleDateString()}
+                            {passenger.dateOfBirth}
                           </td>
                           <td>{passenger.passengerType.replace(/_/g, " ")}</td>
                           <td>

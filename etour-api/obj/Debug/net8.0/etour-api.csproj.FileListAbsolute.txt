@@ -243,3 +243,11 @@ E:\Pratik\C - DAC Course SM VITA\Project\e-tour project\E Tour Project DotNet\et
 E:\Pratik\C - DAC Course SM VITA\Project\e-tour project\E Tour Project DotNet\etour-api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 E:\Pratik\C - DAC Course SM VITA\Project\e-tour project\E Tour Project DotNet\etour-api\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
 E:\Pratik\C - DAC Course SM VITA\Project\e-tour project\E Tour Project DotNet\etour-api\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\Pratik\C - DAC Course SM VITA\Project\e-tour project\E Tour Project DotNet\etour-api\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+E:\Pratik\C - DAC Course SM VITA\Project\e-tour project\E Tour Project DotNet\etour-api\bin\Debug\net8.0\MailKit.dll
+E:\Pratik\C - DAC Course SM VITA\Project\e-tour project\E Tour Project DotNet\etour-api\bin\Debug\net8.0\MimeKit.dll
+E:\Pratik\C - DAC Course SM VITA\Project\e-tour project\E Tour Project DotNet\etour-api\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
+E:\Pratik\C - DAC Course SM VITA\Project\e-tour project\E Tour Project DotNet\etour-api\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
+E:\Pratik\C - DAC Course SM VITA\Project\e-tour project\E Tour Project DotNet\etour-api\obj\Debug\net8.0\etour-api.sourcelink.json
+E:\Pratik\C - DAC Course SM VITA\Project\e-tour project\E Tour Project DotNet\etour-api\bin\Debug\net8.0\iTextSharp.dll
+E:\Pratik\C - DAC Course SM VITA\Project\e-tour project\E Tour Project DotNet\etour-api\bin\Debug\net8.0\Stripe.net.dll

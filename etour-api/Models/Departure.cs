@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 using Microsoft.EntityFrameworkCore;
 
 namespace etour_api.Models;
@@ -34,9 +35,11 @@ public partial class Departure
     public DateTime? UpdatedAt { get; set; }
 
     [InverseProperty("Departure")]
+    [JsonIgnore]
     public virtual ICollection<Booking> Bookings { get; set; } = new List<Booking>();
 
     [ForeignKey("TourId")]
     [InverseProperty("Departures")]
+    [JsonIgnore]
     public virtual Tour Tour { get; set; } = null!;
 }

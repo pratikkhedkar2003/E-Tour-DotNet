@@ -16,7 +16,7 @@ public class Response
 
     [JsonPropertyName("status")]
     public int Status { get; set; } // HttpStatusCode is int in C#
-
+    
     [JsonPropertyName("message")]
     public string Message { get; set; }
 
