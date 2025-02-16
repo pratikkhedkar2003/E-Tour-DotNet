@@ -1,6 +1,7 @@
 
 using etour_api.Dtos;
 using etour_api.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace etour_api.Controllers;
@@ -16,6 +17,7 @@ public class PaymentController : ControllerBase
         _paymentService = paymentService;
     }
 
+    [Authorize(Roles = "ROLE_USER,ROLE_ADMIN")]
     [HttpPost("checkout/hosted")]
     public async Task<ActionResult<string>> CheckoutHosted([FromBody] TourBookingDto tourBookingDto) 
     {

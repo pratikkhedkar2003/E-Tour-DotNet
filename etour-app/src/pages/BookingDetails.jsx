@@ -12,6 +12,7 @@ import {
 import { GiMoneyStack } from "react-icons/gi";
 import { httpPost } from "../constants/http";
 import { useState } from "react";
+import { TOUR_SERVICE_BASE_URL } from "../constants/urls";
 
 const BookingDetails = () => {
   const { bookingId } = useParams();
@@ -36,7 +37,7 @@ const BookingDetails = () => {
   const handlePayment = () => {
     setLoading(true);
     console.log("Bookind Data", { data });
-    fetch("http://localhost:8085/api/v1/tour-service/payment/checkout/hosted", {
+    fetch(`${TOUR_SERVICE_BASE_URL}/payment/checkout/hosted`, {
       credentials: "include",
       method: httpPost,
       headers: { "Content-Type": "application/json" },
