@@ -13,7 +13,7 @@ dist-ssr
 *.local
 
 appsettings.json
-appsettings.Development.json
+appsettings.*.json
 
 # Editor directories and files
 .vscode/*

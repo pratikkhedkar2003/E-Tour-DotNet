@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("etour-api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aeea57774bcdb3b6c969d584a744454aec30dcf2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6254cc36328cd09fa43b740a3d58e5c947fca9d8")]
 [assembly: System.Reflection.AssemblyProductAttribute("etour-api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("etour-api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
